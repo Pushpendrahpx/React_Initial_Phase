@@ -8,6 +8,7 @@ import Counter from './components/counter';
 import Eventbinding from './components/Eventbinding';
 import ParentComponent from './components/ParentComponent';
 import ConditionalRendering from './components/ConditionalRendering';
+import Listrendering from './components/listrendering';
 
 const App = () => {
   
@@ -30,10 +31,12 @@ const App = () => {
 //   }
 
   return (
-    <div><Counter></Counter>
+    <div>
+      {/* <Counter></Counter>
     <Eventbinding></Eventbinding>
     <ParentComponent></ParentComponent>
-    <ConditionalRendering />
+    <ConditionalRendering /> */}
+    <Listrendering />
     </div>
     // <div className='App'>
     //   <StateM></StateM>

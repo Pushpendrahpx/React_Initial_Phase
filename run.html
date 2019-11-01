@@ -1,0 +1,35 @@
+<script>
+    const companies = [
+    {name:"ABB India Ltd",category:"Transformers",start:1845,end:null},
+    {name:"Google LLC",category:"Technology",start:1998,end:null}
+];
+
+const ages = [33,32,43,45,21,12,90];
+
+// for(let i = 0;i<ages.length; i++){
+//     console.log(ages[i]);
+// }
+
+
+// companies.forEach(function(company){
+//     console.log(company);
+// });
+
+// -- Filter
+// let canDrink = [];
+// for(let i = 0;i<ages.length; i++)
+//     if(ages[i] >= 21){
+//         canDrink.push(ages[i]);
+        
+//     }
+    // const canDrink = ages.filter(function(age){
+    //     if(age >= 21){
+    //         return true;
+    //     }
+    // });
+
+    const canDrink = ages.filter(age => age >= 21);
+    console.log(canDrink);
+
+    
+</script>
