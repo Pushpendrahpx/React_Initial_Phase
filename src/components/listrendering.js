@@ -18,6 +18,7 @@ function listrendering(props) {
         age:18,
         skill:'React'
     }];
+    const nameList = names.map(name=><div className='lead'>{name}</div>);
     const data = person.map((person)=>(
         <div className=' container'>
             <div className='card'>
