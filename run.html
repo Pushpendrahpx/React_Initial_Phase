@@ -1,7 +1,8 @@
 <script>
     const companies = [
-    {name:"ABB India Ltd",category:"Transformers",start:1845,end:null},
-    {name:"Google LLC",category:"Technology",start:1998,end:null}
+    {name:"ABB India Ltd",category:"Transformers",start:1845,end:2019},
+    {name:"Google LLC",category:"Technology",start:1998,end:2010},
+    {name:"Yahoo",category:"Technology",start:1998,end:2005}
 ];
 
 const ages = [33,32,43,45,21,12,90];
@@ -29,7 +30,25 @@ const ages = [33,32,43,45,21,12,90];
     // });
 
     const canDrink = ages.filter(age => age >= 21);
-    console.log(canDrink);
+    // console.log(canDrink);
 
+    const retalCompanies = companies.filter(company => company.category === 'Technology');
+    // console.log(retalCompanies)
+
+    const lastingCompanies = companies.filter(company => (company.end - company.start) >= 10);
+    // console.log(lastingCompanies);
     
+    // -- MAP
+// Creating array of Company Name
+const companyNames = companies.map(company=>{
+    return company.start + " - " + company.end;
+});
+
+const agesquare = ages.map(age=>Math.sqrt(age));
+console.log(agesquare)
+console.log(companyNames);
+
+
+const ageop = ages.map(x=>x*2)
+console.log(ageop)
 </script>
