@@ -1,4 +1,5 @@
 import React from 'react';
+import Person from './Person';
 
 function listrendering(props) {
     const names = ["Pushpendra","Vinod","Shiven"];
@@ -20,13 +21,7 @@ function listrendering(props) {
     }];
     const nameList = names.map(name=><div className='lead'>{name}</div>);
     const data = person.map((person)=>(
-        <div className=' container'>
-            <div className='card'>
-            <div className='card-header'>{person.name}</div>
-            <div className='card-body'>I have done specialization in {person.skill} and I'm {person.age} years old.</div>
-        
-            </div>
-          </div>
+        <Person key={person.id} person={person} />
     ));
     return (
         <div>

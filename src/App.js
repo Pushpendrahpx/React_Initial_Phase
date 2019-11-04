@@ -9,6 +9,8 @@ import Eventbinding from './components/Eventbinding';
 import ParentComponent from './components/ParentComponent';
 import ConditionalRendering from './components/ConditionalRendering';
 import Listrendering from './components/listrendering';
+import Stylesheet from './components/Stylesheet';
+import Form1 from './components/forms/form1';
 
 const App = () => {
   
@@ -36,8 +38,11 @@ const App = () => {
     <Eventbinding></Eventbinding>
     <ParentComponent></ParentComponent>
     <ConditionalRendering /> */}
-    <Listrendering />
+    {/* <Listrendering /> */}
+    {/* <Stylesheet primary={true} /> */}
+    <Form1 />
     </div>
+
     // <div className='App'>
     //   <StateM></StateM>
     // <Nav></Nav>
