@@ -6,7 +6,9 @@ class form1 extends Component {
 
         this.state = {
                 email:'',
-                password:''
+                password:'',
+                comments:'',
+                topic:'Angular'
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -14,19 +16,29 @@ class form1 extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(event){
+    handleChange = event=>{
         this.setState({
             email:event.target.value
         });
     }
-    handleChangepass(event){
+    handleChangepass = event =>{
         this.setState({
             password:event.target.value
         });
     }
-    handleSubmit(event) {
-        alert('A emails was submitted: ' + this.state.email);
+    handleSubmit = event=> {
+       console.log(this.state);
         event.preventDefault();
+      }
+      commentChange = event=>{
+          this.setState({
+              comments:event.target.value
+          });
+      }
+      topicChange = (event)=>{
+          this.setState({
+              topic:event.target.value
+          });
       }
     
     render() {
@@ -49,6 +61,21 @@ class form1 extends Component {
                             <input type='password' 
                             value={this.state.password} 
                             onChange={this.handleChangepass} placeholder='Password' className='form-control' />
+                        </div>
+                        
+                        <div className='form-group'>
+                            <label>Comment - </label>
+                            <textarea
+                                value={this.state.comments}
+                                onChange={this.commentChange}
+                                className='form-control' placeholder="Comments"></textarea>
+                        </div>
+                        <div className='form-group'>
+                            <select value={this.state.topic} onChange={this.topicChange}>
+                                <option value='Angular'>Angular</option>
+                                <option value='React'>React</option>
+                                <option value='Vue'>Vue</option>
+                            </select>
                         </div>
                         <div className='form-group'>
                             <button type='submit' className='btn btn-danger btn-large large '>Submit</button>
