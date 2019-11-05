@@ -11,6 +11,7 @@ import ConditionalRendering from './components/ConditionalRendering';
 import Listrendering from './components/listrendering';
 import Stylesheet from './components/Stylesheet';
 import Form1 from './components/forms/form1';
+import A from './components/Life Cycle Methods/A';
 
 const App = () => {
   
@@ -40,7 +41,8 @@ const App = () => {
     <ConditionalRendering /> */}
     {/* <Listrendering /> */}
     {/* <Stylesheet primary={true} /> */}
-    <Form1 />
+    {/* <Form1 /> */}
+    <A />
     </div>
 
     // <div className='App'>
